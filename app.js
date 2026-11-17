@@ -4,7 +4,7 @@ const KEY='extreme_crm_personal_v1';
 const products=window.EXTREME_PRODUCTS||[];
 const defaultChannels=window.EXTREME_CHANNELS||[];
 const defaultMilestones=window.EXTREME_MILESTONES||[];
-const empty=()=>({customers:[],visits:[],sales:[],collections:[],activities:[],channels:structuredClone(defaultChannels),milestones:structuredClone(defaultMilestones),settings:{workingDays:22,planStart:'2026-11-01',tradePrice:100,clientId:'',spreadsheetId:''},lastSaved:null});
+const empty=()=>({customers:[],visits:[],sales:[],collections:[],activities:[],channels:structuredClone(defaultChannels),milestones:structuredClone(defaultMilestones),settings:{workingDays:22,planStart:'2026-11-01',tradePrice:100,clientId:'',spreadsheetId:'1NKl4ujMJlvpqR9GcvBhQedSn8BGP5dbUgsyK2pYfXQk'},lastSaved:null});
 let state;
 try{state=Object.assign(empty(),JSON.parse(localStorage.getItem(KEY)||'{}'));}catch(e){state=empty();}
 for(const k of ['customers','visits','sales','collections','activities'])if(!Array.isArray(state[k]))state[k]=[];
